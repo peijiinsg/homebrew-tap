@@ -3,21 +3,21 @@ require_relative "../custom_download_strategy"
 class Playground < Formula
   desc "Useful toolset"
   homepage "https://github.com/peijiinsg/playground"
-  version "1.1.2"
+  version "1.1.3"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/peijiinsg/playground/releases/download/v1.1.2/playground_1.1.2_Darwin_x86_64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-    sha256 "0d350388875ecdcd559b540cb3f0e0b1599101ea945521fe147069b8b156bfe1"
+    url "https://github.com/peijiinsg/playground/releases/download/v1.1.3/playground_1.1.3_Darwin_x86_64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+    sha256 "b265ca53844410d72f537bed2b9f05810c73f6d19ff9a449e99101beab9a8535"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/peijiinsg/playground/releases/download/v1.1.2/playground_1.1.2_Linux_x86_64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "79db515311e8233fabafb84b40d502418e18fd8998596b12edb8b5829faabb56"
+      url "https://github.com/peijiinsg/playground/releases/download/v1.1.3/playground_1.1.3_Linux_x86_64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "712241734a85a36a9d0cfd13e37d0a33972905284ab3168232da32d3a1ab4d93"
     end
   end
 
   def install
-    system("tar -xvf playground")
+    bin.install "playground"
   end
 
   test do
