@@ -19,7 +19,7 @@ class Playground < Formula
   def install
     # For some reason the tar ball that homebrew downloads contains another weirdly named 
     # tar ball that contains the actual files and needs to be extracted
-    system("tar -xvf www.w3.org")
+    system("tar -xvf program")
   end
 
   test do
